@@ -9,21 +9,27 @@ This API is designed to manage user data in a MongoDB database. It provides endp
 
 ## Installation
 
-1. Clone the repository:
+### Clone the repository:
 
-- **git clone** https://github.com/Muralitharan2002/node_api.git
+```bash
+git clone https://github.com/Muralitharan2002/node_api.git
+ ```
 
-2. Install dependencies:
+### Install dependencies:
 
-- npm install
+```bash
+npm install
+```
 
-3. Set up MongoDB:
+### Start the server:
+
+```bash
+npm start
+```
+### Set up MongoDB:
    - Make sure MongoDB is installed and running on your system.
    - Update the MongoDB connection URI in the `.env` file if necessary.
 
-4. Start the server:
-
-- npm start
 
 The API should now be running on http://localhost:8080.
 
