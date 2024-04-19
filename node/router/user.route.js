@@ -7,6 +7,7 @@ router.get("/fetch", controller.randomUser)
 router.get("/checkExist", controller.checkExist)
 router.post("/filter", controller.filterAge)
 router.get("/allNames", controller.allNames)
+router.put("/update", controller.update)
 
 
 

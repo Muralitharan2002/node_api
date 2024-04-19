@@ -72,4 +72,23 @@ const allNames = async (req, res) => {
     }
 }
 
-module.exports = { create, randomUser, checkExist, filterAge, allNames }
+const update = async (req, res) => {
+    try {
+        const { Name, location } = req.body;
+        const finduser = await user.findOne({ Name })
+
+        if (finduser) {
+            const newlocation = finduser.City = location;
+
+            await finduser.save();
+            return res.json({ status: "updated", finduser })
+        } else {
+            return res.json({ message: "user not found" })
+        }
+
+    } catch (err) {
+        return res.json({ "Error": err.message })
+    }
+}
+
+module.exports = { create, randomUser, checkExist, filterAge, allNames, update }
